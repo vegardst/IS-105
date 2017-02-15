@@ -1,0 +1,1 @@
+powershell -Command "While(1) { Get-Process boring10_main | ft -a; sleep 1; cls}"
