@@ -5,6 +5,7 @@ import (
 )
 
 func main() {
-	ascii.IterateOverASCIIStringLiteral(ascii.Ascii);
+	//ascii.IterateOverASCIIStringLiteral(ascii.Ascii);
+	ascii.GreetingASCII();
 
 }
