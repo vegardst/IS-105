@@ -43,12 +43,3 @@ func IsASCII(s string) bool {
 	}
 	return true
 }
-
-
-//for i := 0; i < len(tester); i++ {
-//	for j := 0; i < len(Ascii); j++ {
-//		if tester[i] != Ascii[j] {
-//			fmt.Println("Feil")
-//		}
-//	}
-//}
