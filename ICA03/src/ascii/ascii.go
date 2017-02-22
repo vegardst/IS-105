@@ -1,7 +1,5 @@
 package ascii
 
-//
-
 import (
 	"fmt"
 )
@@ -12,43 +10,17 @@ const Ascii = "\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f"
 	`@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_` +
 	"`abcdefghijklmnopqrstuvwxyz{|}~\x7f"
 
-
-
-// Funksjon tar en streng med kun ASCII tegn og lager en utskrift på
-// følgende format:
-// [ascii-kode heksadesimalt med store bokstaver A-F][mellomrom]
-// [symbol for ascii-kode][mellomrom][ascii-kode binært][linjeskift]
-// Eksempel (bruk denne funksjonen i en main.go fil):
-//	…
-// 3E > 111110
-// 3F ? 111111
-// 40 @ 1000000
-// ...
 func IterateOverASCIIStringLiteral(ascii string) {
 	for i := 0; i < len(ascii); i++ {
 		fmt.Printf("%X %+q %b \n", ascii[i], ascii[i], ascii[i])
+	}
 	//      Linje for linje
 	//	fmt.Printf("%q ", sl[i])
 	//	fmt.Printf("%b ", sl[i])
-	//	fmt.Println("")
-
-	}
+	//	.......
 }
 
-// Funksjonen skal generere en utskrift fra en sekvens av bytes,
-// dvs. av typen []bytes (det betyr at du må finne den heksadesimale
-// eller binære representasjonen av alle tegn i strengen,
-// som skal skrives ut (inkludert anførselstegn eller
-// “double quotes” på engelsk).
-// Funksjonen greetingASCII() returnerer en variabel av typen string,
-// som inneholder kun ASCII tegn (ikke utvidet ASCII).
-// Gjelder oppgave 1b
-func GreetingASCII() {
-	// Print hex
-	fmt.Println("HEX:")
-	hellohex := "\x22\x48\x65\x6C\x6C\x6F\x20\x3A\x2D\x29\x22"
-	fmt.Println(hellohex)
-
+func GreetingASCII() string {
 	// Print DEC
 	fmt.Println("DEC:")
 	helloDec := []byte{34, 72, 101, 108, 108, 111, 32, 58, 45, 41, 34}
@@ -56,5 +28,18 @@ func GreetingASCII() {
 		fmt.Printf("%c", helloDec[i])
 	//	fmt.Printf("%s", string(helloDec[i]))
 	}
+	fmt.Println()
+	// Print HEX
+	hellohex := "\x22\x48\x65\x6C\x6C\x6F\x20\x3A\x2D\x29\x22"
+	return hellohex
 }
 
+// From Go Playground
+func IsASCII(s string) bool {
+	for _, c := range s {
+		if c > 127 {
+			return false
+		}
+	}
+	return true
+}
