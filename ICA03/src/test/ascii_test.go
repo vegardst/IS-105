@@ -1,9 +1,12 @@
 package ascii
 
-import 	"testing"
+import 	(
+	"testing"
+	"../ascii"
+	)
 
 func TestGreetingASCII(t *testing.T) {
-	ascii := GreetingASCII()
+	ascii := ascii.GreetingASCII()
 	if !(isASCII(ascii)){
 		t.Fail()
 	}

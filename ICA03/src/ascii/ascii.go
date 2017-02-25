@@ -15,9 +15,18 @@ func IterateOverASCIIStringLiteral(ascii string) {
 		fmt.Printf("%X %+q %b \n", ascii[i], ascii[i], ascii[i])
 	}
 	//      Linje for linje
-	//	fmt.Printf("%q ", sl[i])
+	//	fmt.Printf("%q ", sl[i])1
 	//	fmt.Printf("%b ", sl[i])
 	//	.......
+
+	//fmt.Println("Hentet ASCII fra unicode:")
+	//for _, ascii16 := range unicode.ASCII_Hex_Digit.R16 {
+	//	//fmt.Println(v)
+	//	for i := ascii16.Lo; i <= ascii16.Hi; i++ {
+	//			fmt.Printf("%X %+q %b \n", i, i, i)
+	//
+	//	}
+	//}
 }
 
 func GreetingASCII() string {

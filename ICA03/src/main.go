@@ -1,12 +1,12 @@
 package main
 
 //////////////////////////////////
-//	Erlend Wiklem 2017	//
-//	ICA03, IS-105		//
+// 	ICA03, IS-105	 //Zwirc//
 //////////////////////////////////
 
 import (
 	"./ascii"
+	"./iso"
 	"bufio"
 	"os"
 	"fmt"
@@ -38,6 +38,15 @@ func main() {
 			oppgave1c();
 			ferdig();
 			break
+		case "2a":
+			fmt.Println("Oppgave 2a:");
+			oppgave2a();
+			ferdig();
+			break
+		case "2b":
+			fmt.Println("Oppgave 2b:");
+			oppgave2b();
+			ferdig();
 			break
 		default:
 			fmt.Printf("Du må velge nummer på type!")
@@ -51,7 +60,9 @@ func menu(){
 		"exit = Avslutter programmet \n\n" +
 		"1a = Oppgave 1a \n" +
 		"1b = Oppgave 1b\n" +
-		"1c = Oppgave 1c")
+		"1c = Oppgave 1c\n" +
+		"2a = Oppgave 2a\n" +
+		"2b = Oppgave 2b")
 }
 func ferdig(){
 	fmt.Println("Skriv neste oppgave eller hjelp for meny og exit for å avslutte!")
@@ -83,4 +94,12 @@ func oppgave1c(){
 		fmt.Println(" = Koden er ikke ASCII!")
 	}
 	fmt.Println("Se egen ascii_test.go fil for selve Test oppgaven")
+}
+
+func oppgave2a(){
+	iso.CreateExtendedAscii()
+}
+
+func oppgave2b(){
+	fmt.Println("Retur: \n" + iso.GreetingExtendedASCII())
 }
