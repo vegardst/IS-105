@@ -10,6 +10,7 @@ const Ascii = "\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f"
 	`@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_` +
 	"`abcdefghijklmnopqrstuvwxyz{|}~\x7f"
 
+
 func IterateOverASCIIStringLiteral(ascii string) {
 	for i := 0; i < len(ascii); i++ {
 		fmt.Printf("%X %+q %b \n", ascii[i], ascii[i], ascii[i])
@@ -21,7 +22,7 @@ func IterateOverASCIIStringLiteral(ascii string) {
 
 	//fmt.Println("Hentet ASCII fra unicode:")
 	//for _, ascii16 := range unicode.ASCII_Hex_Digit.R16 {
-	//	//fmt.Println(v)
+//	//fmt.Println(v)
 	//	for i := ascii16.Lo; i <= ascii16.Hi; i++ {
 	//			fmt.Printf("%X %+q %b \n", i, i, i)
 	//

@@ -7,21 +7,21 @@ import (
 
 //Oppgave 2A
 func CreateExtendedAscii(){
-	var ascii []byte
+	var extascii []byte
 	for i := 0x80; i <= 0xFF; i++ {
-		ascii = append(ascii, byte(i))
+		extascii = append(extascii, byte(i))
 	}
-	IterateOverASCIIStringLiteral(ascii)
+	IterateOverASCIIStringLiteral(extascii)
 }
 
-func IterateOverASCIIStringLiteral(ascii []byte) {
-	for i := 0; i < len(ascii); i++ {
-		fmt.Printf("%X %q %b \n", ascii[i], ascii[i], ascii[i])
+func IterateOverASCIIStringLiteral(extascii []byte) {
+	for i := 0; i < len(extascii); i++ {
+		fmt.Printf("%X %q %b \n", extascii[i], extascii[i], extascii[i])
 	}
 
 	// Alternativ for å se data fra bytes:
 	fmt.Println("Alternativ print-string av byte listen:")
-	data := json.RawMessage(ascii)
+	data := json.RawMessage(extascii)
 	bytes, err := data.MarshalJSON()
 	if err != nil {
 		fmt.Println("error")
@@ -29,6 +29,11 @@ func IterateOverASCIIStringLiteral(ascii []byte) {
 		//print console
 		fmt.Println(string(bytes))
 	}
+
+	// Print string
+	fmt.Println("Print string:")
+	s := string(extascii[:])
+	fmt.Println(s)
 }
 
 //Oppgave 2B
