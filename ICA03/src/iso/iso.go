@@ -18,22 +18,37 @@ func IterateOverASCIIStringLiteral(extascii []byte) {
 	for i := 0; i < len(extascii); i++ {
 		fmt.Printf("%X %q %b \n", extascii[i], extascii[i], extascii[i])
 	}
+	fmt.Println("")
 
-	// Alternativ for å se data fra bytes:
-	fmt.Println("Alternativ print-string av byte listen:")
-	data := json.RawMessage(extascii)
-	bytes, err := data.MarshalJSON()
-	if err != nil {
-		fmt.Println("error")
-	} else {
-		//print console
-		fmt.Println(string(bytes))
-	}
+	// Print symbol fra byte
+	fmt.Println("Byte utskrift:")
+	fmt.Println(extascii)
+	fmt.Println("")
+
 
 	// Print string
-	fmt.Println("Print string:")
+	fmt.Println("Utskrift i string:")
 	s := string(extascii[:])
 	fmt.Println(s)
+	fmt.Println("")
+
+	// Print string 2
+	fmt.Println("HEX av string::")
+	fmt.Printf("%q" ,string(s))
+	fmt.Println("")
+	fmt.Println("")
+
+	// Print strnig 3
+	//fmt.Println("String eksempel 3:")
+	//data := json.RawMessage(extascii)
+	//bytes, err := data.MarshalJSON()
+	//if err != nil {
+	//	fmt.Println("error")
+	//} else {
+	//	//print console
+	//	fmt.Println(string(bytes))
+	//}
+	fmt.Println("Hvis du ikke ser symbolene, må du endre encoding på din terminal")
 }
 
 //Oppgave 2B
