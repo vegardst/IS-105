@@ -2,7 +2,7 @@ package iso
 
 import (
 	"fmt"
-	"encoding/json"
+//	"encoding/json"
 )
 
 //Oppgave 2A

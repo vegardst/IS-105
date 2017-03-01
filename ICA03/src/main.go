@@ -101,5 +101,5 @@ func oppgave2a(){
 }
 
 func oppgave2b(){
-	fmt.Println("Retur: \n" + iso.GreetingExtendedASCII())
+	fmt.Println("\nRetur: \n" + iso.GreetingExtendedASCII())
 }
