@@ -19,17 +19,11 @@ func IterateOverASCIIStringLiteral(extascii []byte) {
 		fmt.Printf("%X %q %b \n", extascii[i], extascii[i], extascii[i])
 	}
 	fmt.Println("")
+	s := string(extascii[:])
 
 	// Print symbol fra byte
 	fmt.Println("Byte utskrift:")
 	fmt.Println(extascii)
-	fmt.Println("")
-
-
-	// Print string
-	fmt.Println("Utskrift i string:")
-	s := string(extascii[:])
-	fmt.Println(s)
 	fmt.Println("")
 
 	// Print string 2
@@ -37,6 +31,19 @@ func IterateOverASCIIStringLiteral(extascii []byte) {
 	fmt.Printf("%q" ,string(s))
 	fmt.Println("")
 	fmt.Println("")
+
+	// Print string
+	fmt.Println("Utskrift i string:")
+	fmt.Println(s)
+	fmt.Println("")
+
+	// Print string
+	fmt.Println("Utskrift i %s av string:")
+	fmt.Printf("%s", s)
+	fmt.Println("")
+	fmt.Println("")
+
+
 
 	// Print strnig 3
 	//fmt.Println("String eksempel 3:")

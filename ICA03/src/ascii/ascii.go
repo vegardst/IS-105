@@ -38,7 +38,7 @@ func GreetingASCII() string {
 		fmt.Printf("%c", helloDec[i])
 	//	fmt.Printf("%s", string(helloDec[i]))
 	}
-	fmt.Println()
+	fmt.Println("")
 	// Print HEX
 	hellohex := "\x22\x48\x65\x6C\x6C\x6F\x20\x3A\x2D\x29\x22"
 	return hellohex
