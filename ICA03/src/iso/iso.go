@@ -32,12 +32,12 @@ func IterateOverASCIIStringLiteral(extascii []byte) {
 	fmt.Println("")
 	fmt.Println("")
 
-	// Print string
+	// Print string 3
 	fmt.Println("Utskrift i string:")
-	fmt.Println(s)
+	fmt.Println(string(extascii))
 	fmt.Println("")
 
-	// Print string
+	// Print string 4
 	fmt.Println("Utskrift i %s av string:")
 	fmt.Printf("%s", s)
 	fmt.Println("")
