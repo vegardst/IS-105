@@ -11,6 +11,7 @@ import (
 	"./fileutils"
 	"./treasure"
 	"./unicode"
+	"./server"
 	"bufio"
 	"os"
 	"fmt"
@@ -201,5 +202,7 @@ func oppgave4a() {
 	fmt.Printf(" Japanese: %s \n", unicode.Translate(tekst, "Japanese"))
 }
 func oppgave4b() {
-	fmt.Println("Kjørt i nettleser...")
+	fmt.Println("Starter server på http://localhost:3000")
+	server.StartServer()
 }
+
