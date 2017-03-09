@@ -195,11 +195,10 @@ func oppgave3c() {
 
 }
 func oppgave4a() {
-	const tekst = "\x48\x65\x6e\x72\x69\x6b\x20"
+	const tekst = "\xE2\x80\x9C\x6E\x6F\x72\x64\x20\x6F\x67\x20\x73\xC3\xB8\x72\xE2\x80\x9D"
 	fmt.Printf(" Norwegian: %s \n", unicode.Translate(tekst, "Norwegian"))
 	fmt.Printf(" Icelandic: %s \n", unicode.Translate(tekst, "Icelandic"))
 	fmt.Printf(" Japanese: %s \n", unicode.Translate(tekst, "Japanese"))
-
 }
 func oppgave4b() {
 	fmt.Println("Kjørt i nettleser...")
