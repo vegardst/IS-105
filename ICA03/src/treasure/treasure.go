@@ -4,11 +4,15 @@ import (
 	"os"
 	"log"
 	"io"
+	"io/ioutil"
+	"strings"
+	"strconv"
+	"golang.org/x/text/encoding/charmap"
 )
 
 // Kode for Oppgave 3c
 // Bruk strengen fra filen treasure.txt som in-data for denne funksjonen
-func PrintTreasureUTF8(filename string)[]byte {
+func PrintTreasure(filename string)[]byte {
 
 	// Open file for reading
 	file, err := os.Open(filename)
@@ -35,4 +39,20 @@ func PrintTreasureUTF8(filename string)[]byte {
 	}
 
 	return byteSlice // returverdien er her kun en stedsholder
+}
+func PrintTreasureUTF8(filename string) string {
+	var byteslice []byte
+	input, err := ioutil.ReadFile(filename)
+	if err != nil {
+		log.Fatal(err)
+	}
+	for _, i := range strings.Split(string(input), "\\x") {
+		if (len(i) > 0) {
+			i = strings.TrimSpace(i)
+			i, _ := strconv.ParseUint(i, 16, 16)
+		byteslice = append(byteslice, byte(i))
+		}
+	}
+	returnstring, _ := charmap.ISO8859_1.NewDecoder().Bytes(byteslice)
+	return string(returnstring)
 }
