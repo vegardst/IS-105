@@ -43,3 +43,4 @@ a) Strengen representeres i HEX og vises ved å kjøre 4a.
 <br>
 <br>
 b) Siden jeg satt "text/html;charset=ISO-8859-1" i headeren, bruker jeg dette charset for å vise klokke symbolet og bruker time pakken for å gjøre en utskrift av dato, tid.
+<br>
