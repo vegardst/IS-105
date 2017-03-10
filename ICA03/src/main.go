@@ -1,7 +1,8 @@
 package main
 
 //////////////////////////////////
-// 	ICA03, IS-105	 //Zwirc//
+// 	ICA03, IS-105	 	//
+// 	2017, 	Zwirc		//
 //////////////////////////////////
 
 import (
@@ -19,6 +20,8 @@ import (
 	"golang.org/x/text/encoding/charmap"
 )
 var scanner = bufio.NewScanner(os.Stdin)
+
+// Endre source til din egen source!
 const source = "C:/OneDrive/Skole/ICA/ICA03/src/"
 
 func main() {
