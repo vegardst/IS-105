@@ -1,11 +1,47 @@
 package oppgaver
 
+//////////////////////////////////
+// 	ICA04, IS-105	 	//
+// 	2017, 	Zwirc		//
+//////////////////////////////////
 import (
 	"os"
 	"fmt"
+	"bufio"
+	"syscall"
 )
+
 // Oppgave 2
-func FileInfo(filename string) {
+func Oppgave2a(source string) {
+	fmt.Println("Skriv filbane på filen du vil scanne: (Root soruce definert i var)")
+	var fileinfo = bufio.NewScanner(os.Stdin)
+	var fileinput string = "Ingen fil valgt"
+	for fileinfo.Scan() {
+		fileinput = source + string(fileinfo.Text())
+		break
+	}
+	fileInfo(fileinput)
+}
+func Oppgave2b() {
+	fmt.Println("Oppgaven må gjøres på linux")
+	stdin := os.NewFile(uintptr(syscall.Stdin), "/dev/stdin")
+	fmt.Println("​/dev/stdin​ :")
+	fileInfo(stdin.Name())
+	fmt.Println("/dev/ram0 :")
+	fileInfo("/dev/ram0")
+}
+func Oppgave2c() {
+	//
+	//
+	// HUSK Å ENDRE DENNE
+	//
+	//
+	//
+	fmt.Println("Filene er bygget og ligger i out mappen.")
+	fmt.Println("Alternativ: linux, mac, windows")
+}
+
+func fileInfo(filename string) {
 	fmt.Println("Informasjon om filen: " + filename)
 	fileStats(filename)
 

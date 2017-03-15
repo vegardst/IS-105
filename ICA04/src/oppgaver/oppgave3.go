@@ -1,16 +1,58 @@
 package oppgaver
 
+//////////////////////////////////
+// 	ICA04, IS-105	 	//
+// 	2017, 	Zwirc		//
+//////////////////////////////////
 import (
 	"bytes"
 	"fmt"
 	"sort"
 	"os"
 	"log"
+	"bufio"
 )
+
+func Oppgave3a() {
+	fmt.Println("Ved bruk av os og ioutil pakkene kan man behandle filer. " +
+		"I disse pakken finner vi metoder som kan gjøre det meste med filer" +
+		"os.Create" +
+		"os.Remove" +
+		"os.Rename" +
+		"os.OpenFile" +
+		"os.Open" +
+		"os.Chmod")
+}
+func Oppgave3b(source string) {
+	fmt.Println("Skriv inn filen du ønsker å scanne (root source)")
+	var filelenght = bufio.NewScanner(os.Stdin)
+	var fileinput string = "Ingen fil valgt"
+	for filelenght.Scan() {
+		fileinput = source + string(filelenght.Text())
+		break
+	}
+
+	fmt.Print("Antall linjeskift i filen: ")
+	fmt.Println(findInText(fileinput, "\n"))
+
+	// Henter map av filen
+	m := countFile(fileinput)
+	// Sorterer og printer resultat:
+	sortAndPrint(m)
+
+}
+func Oppgave3c() {
+	//
+	//
+	// HUSK Å ENDRE DENNE
+	//
+	//
+	fmt.Println("Kjør benchmark på egne filer")
+}
 
 // Oppgave 3b (1/3)
 // Finner tekst i fil.
-func FindInText(filename string, find string) int {
+func findInText(filename string, find string) int {
 	// Last inn filen
 	file, err := os.Open(filename)
 	if err != nil {
@@ -29,12 +71,12 @@ func FindInText(filename string, find string) int {
 
 // Oppgave 3b (2/3)
 // Lager en map med resultatet for hver rune, og returnerer denne
-func CountFile(filename string) map[int]string {
+func countFile(filename string) map[int]string {
 	m := make(map[int]string)
 	count := 0
 	// Runer for Ascii code valgt:
 	for i := 0x20; i <= 0x7F; i++ {
-		count = FindInText(filename, string(i))
+		count = findInText(filename, string(i))
 		rune := string(i)
 		m[count] = rune
 	}
@@ -44,7 +86,7 @@ func CountFile(filename string) map[int]string {
 
 // Oppgave 3b (3/3)
 // Sorterer map listen med append, og printer ut de fem største verdier.
-func SortAndPrint(m map[int]string) {
+func sortAndPrint(m map[int]string) {
 	var keys []int
 	for k := range m {
 		keys = append(keys, k)

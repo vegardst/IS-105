@@ -1,5 +1,9 @@
 package oppgaver
 
+//////////////////////////////////
+// 	ICA04, IS-105	 	//
+// 	2017, 	Zwirc		//
+//////////////////////////////////
 import (
 	"text/tabwriter"
 	"os"
@@ -8,8 +12,39 @@ import (
 	"github.com/mozu0/huffman"
 )
 
+func Oppgave4a() {
+	/*
+	 Helse og Idrettsdag		1420	1829
+	 Humanoira og pedagogikk	1182	1525
+	 Kunstfag			 293	 420
+	 Teknologi og realfag		1337	2166
+	 Lærerutdanning			1158	1506
+	 Økonomi og samfunnsvitenskap	2398	3098
+
+	 Antall mulige utfall:		7788	10544
+	 */
+	UIAlist()
+
+}
+func Oppgave4b() {
+	UIAinfo()
+	fmt.Println(" Fakulitetet Kunstfag får minst informasjon som sett over.")
+
+}
+func Oppgave4c() {
+	UIAhuffman()
+
+}
+func Oppgave4d() {
+	UIAaverage()
+}
+
+func Oppgave4e() {
+
+}
+
 // Oppgave 4a
-func UIAlist(){
+func UIAlist() {
 	w := tabwriter.NewWriter(os.Stdout, 0, 0, 0, ' ', tabwriter.AlignRight|tabwriter.Debug)
 	fmt.Fprintln(w, "Fakulitet \t år 2014 \t år 2015 \t")
 	fmt.Fprintln(w, "\t\t")
@@ -43,7 +78,7 @@ func UIAlist(){
 }
 
 // Oppgave 4b
-func UIAinfo(){
+func UIAinfo() {
 	var HI int64 = 1829
 	var HP int64 = 1525
 	var K int64 = 420
@@ -65,8 +100,8 @@ func UIAinfo(){
 // Oppgave 4c
 // Importerer "github.com/mozu0/huffman"
 // Skriver så ut resultatet i table
-func UIAhuffman(){
-	HI  := 1829
+func UIAhuffman() {
+	HI := 1829
 	HP := 1525
 	K := 420
 	TR := 2166
@@ -95,7 +130,7 @@ func UIAhuffman(){
 
 }
 
-
+// Oppgave 4d
 func UIAaverage() {
 
 	// Av bit lengden
@@ -111,78 +146,6 @@ func UIAaverage() {
 //////////////////
 // EXPERIMENTAL //
 //////////////////
-
-// Av "kodelengde"
-//	A := 11100100101
-//	B := 10111110101
-//	C := 110100100
-//	D := 100001110110
-//	E := 10111100010
-//	F := 110000011010
-//	Al := len(string(A))
-//	Bl := len(string(B))
-//	Cl := len(string(C))
-//	Dl := len(string(D))
-//	El := len(string(E))
-//	Fl := len(string(F))
-//	al := float64(Al)
-//	bl := float64(Bl)
-//	cl := float64(Cl)
-//	dl := float64(Dl)
-//	el := float64(El)
-//	fl := float64(Fl)
-//	fmt.Print("Lengde på melding til 100 stk fra bit lengde av string: ")
-//	tot := 100*(al*0.1734) + (bl * 0.1446) + (cl * 0.0398) + (dl * 0.2054) + (el * 0.1428) + (fl * 0.2938)
-//	fmt.Print(tot)
-//	fmt.Print("\nTil binary:")
-//	fmt.Println(strconv.FormatInt(int64(tot), 2))
-//
-//
-//	// Test for lengde av faktisk string
-//	As := "Helse og Idrettsdag"
-//	Bs := "Humanoira og pedagogikk"
-//	Cs := "Kunstfag"
-//	Ds := "Teknologi og realfag"
-//	Es := "Lærerutdanning"
-//	Fs := "Økonomi og samfunnsvitenskap"
-//	as := float64(len(As))
-//	bs := float64(len(Bs))
-//	cs := float64(len(Cs))
-//	ds := float64(len(Ds))
-//	es := float64(len(Es))
-//	fs := float64(len(Fs))
-//	fmt.Print("Lengde på melding til 100 stk fra String lengde: ")
-//	tots := 100*(as*0.1734) + (bs * 0.1446) + (cs * 0.0398) + (ds * 0.2054) + (es * 0.1428) + (fs * 0.2938)
-//	fmt.Print(tot)
-//	fmt.Print("\nTil binary:")
-//	fmt.Println(strconv.FormatInt(int64(tots), 2))
-//}
-//////////////////////////////////
-// EXPERIMENTAL /////////////////
-//////////////////////////////////
-//As := "Helse og Idrettsdag"
-//Bs := "Humanoira og pedagogikk"
-//Cs := "Kunstfag"
-//Ds := "Teknologi og realfag"
-//Es := "Lærerutdanning"
-//Fs := "Økonomi og samfunnsvitenskap"
-//a1 := stringToBin(As)
-//b2 := stringToBin(Bs)
-//c3 := stringToBin(Cs)
-//d4 := stringToBin(Ds)
-//e5 := stringToBin(Es)
-//f6 := stringToBin(Fs)
-//as, _ := strconv.ParseFloat(a1, 64)
-//bs, _ := strconv.ParseFloat(b2, 64)
-//cs, _ := strconv.ParseFloat(c3, 64)
-//ds, _ := strconv.ParseFloat(d4, 64)
-//es, _ := strconv.ParseFloat(e5, 64)
-//fs, _ := strconv.ParseFloat(f6, 64)
-//fmt.Print("Lengde på melding til 100 stk fra String lengde: ")
-//tots := 100*(as*0.1734) + (bs * 0.1446) + (cs * 0.0398) + (ds * 0.2054) + (es * 0.1428) + (fs * 0.2938)
-//fmt.Println(strconv.FormatInt(int64(tots), 2))
-//
-//}
 //func stringToBin(s string) (binString string) {
 //	for _, c := range s {
 //		binString = fmt.Sprintf("%s%b",binString, c)
