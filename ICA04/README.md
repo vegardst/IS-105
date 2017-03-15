@@ -69,7 +69,8 @@ b)  Fakulitetet Kunstfag får minst informasjon som sett over.
 Økonomi og samfunnsvitenskap |  110000011010  |
 ```
 <br>
-c) Huffmancode for alle fakulitet:
+c) Huffmancode for alle fakulitet <br>
+
 ```
                    Fakulitet | Informasjon |
                              |             |
@@ -80,6 +81,7 @@ c) Huffmancode for alle fakulitet:
               Lærerutdanning |        001  |
 Økonomi og samfunnsvitenskap |         10  |
 ```
+
 <br>
 d) Antall * (Lengden på melding * sansynlighet) + (Lengden på ......
 <br>
