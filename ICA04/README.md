@@ -40,4 +40,47 @@ os.OpenFile
 os.Open
 os.Chmod
 ```
-b)
+b) Se vedlegg
+<br>
+c) Se vedlegg
+#### Oppgave 4
+a) Sannsynligheten regner vi ved å ta Muligheter / total * 100 %
+```
+                   Fakulitet |    Sannsynlighet 2015 |
+                             |                       |
+         Helse og Idrettsdag |  17.346358118361152 % |
+     Humaniora og pedagogikk |  14.463201820940819 % |
+                    Kunstfag |   3.983308042488619 % |
+        Teknologi og realfag |   20.54248861911988 % |
+              Lærerutdanning |  14.283004552352049 % |
+Økonomi og samfunnsvitenskap |   29.38163884673748 % |
+```
+<br>
+
+b)  Fakulitetet Kunstfag får minst informasjon som sett over.
+```
+                   Fakulitet |    Informasjon |
+                             |                |
+         Helse og Idrettsdag |   11100100101  |
+     Humaniora og pedagogikk |   10111110101  |
+                    Kunstfag |     110100100  |
+        Teknologi og realfag |  100001110110  |
+              Lærerutdanning |   10111100010  |
+Økonomi og samfunnsvitenskap |  110000011010  |
+```
+<br>
+c) Huffmancode for alle fakulitet:
+```
+                   Fakulitet | Informasjon |
+                             |             |
+         Helse og Idrettsdag |        111  |
+     Humaniora og pedagogikk |        110  |
+                    Kunstfag |        000  |
+        Teknologi og realfag |         01  |
+              Lærerutdanning |        001  |
+Økonomi og samfunnsvitenskap |         10  |
+```
+<br>
+d) Antall * (Lengden på melding * sansynlighet) + (Lengden på ......
+<br>
+   Lengde på melding til 100 stk fra huffman bit lengde: 54
