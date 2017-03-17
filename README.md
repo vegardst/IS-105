@@ -27,7 +27,7 @@ Gogland har også autofullfør  funksjon:<br>
 Når du kjører en main.go fil, har du mulighet til å gi input og teste om programmet fungerer:
 ![alt text](https://github.com/Zwirc/IS-105/blob/master/HowTo/Kjoring-Av-MainGO.PNG "Wapp")
 
-##How to git?
+<h1>How to git?</h1>
 <br> Step by step:
 <br> Gå inn på mappen dere vil "lagre" Repoen på. (f.eks mkdir GitGroup  -> cd GitGroup)
 <br> 1. Last ned med git clone kommandoen
