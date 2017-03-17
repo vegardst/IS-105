@@ -7,15 +7,16 @@ Last ned prosjektet lokalt: git clone LINK-TIL-REPO
  Anbefaler å åpne prosjektet i Go IDE fra JetBrains: https://www.jetbrains.com/go/ 
 Når du har åpnet prosjektet i Gogland, ser du følgende oversikt over ICA moduler:
 <br>
-![alt text](https://github.com/Zwirc/IS-105/blob/master/HowTo/Gogland.png "Wapp")
+![alt text](https://github.com/Zwirc/IS-105/blob/master/HowTo/Gogland.PNG "Wapp")
 <br> Nyttige funksjoner:
 Gogland hjelper deg automatisk å finne Go, og du kan enkelt kjøre go filer fra Gogland.
 <br>
 Det er også mulighet for å åpne terminal direkte i Gogland, eller automatisk pushe til Git repoen din.<br>
-![alt text](https://github.com/Zwirc/IS-105/blob/master/HowTo/Gogland2.png "Wapp")
+![alt text](https://github.com/Zwirc/IS-105/blob/master/HowTo/Gogland2.PNG "Wapp")
 
 <br>
 Du lager ny fil ved å høyre-klikke på mappen du ønsker filen i, og velg Go File:
+
 ![alt text](https://github.com/Zwirc/IS-105/blob/master/HowTo/NewFile.png "Wapp")
 <br>
 <br>
@@ -24,7 +25,7 @@ Gogland har også autofullfør  funksjon:<br>
 ![alt text](https://github.com/Zwirc/IS-105/blob/master/HowTo/Autofullfor.png "Wapp")
 <br>
 Når du kjører en main.go fil, har du mulighet til å gi input og teste om programmet fungerer:
-![alt text](https://github.com/Zwirc/IS-105/blob/master/HowTo/Kjoring-Av-MainGO.png "Wapp")
+![alt text](https://github.com/Zwirc/IS-105/blob/master/HowTo/Kjoring-Av-MainGO.PNG "Wapp")
 
 ##How to git?
 <br> Step by step:
