@@ -16,7 +16,7 @@ Det er også mulighet for å åpne terminal direkte i Gogland, eller automatisk 
 
 
 Gogland har også autofullfør  funksjon:
-
+![alt text](https://github.com/Zwirc/IS-105/blob/master/HowTo/Autofullfor.png "Wapp")
 
 
 ##How to git?
