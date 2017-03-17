@@ -1,4 +1,4 @@
-<h1>ppgaver for IS-105</h1>
+<h1>Oppgaver for IS-105</h1>
 <h2>Hvor starter jeg?</h2>
 Alle prosjekt er laget under ICA som root source.
 <br>
@@ -10,6 +10,7 @@ Alle prosjekt er laget under ICA som root source.
 <br>
 4.Når du har åpnet prosjektet i Gogland, ser du følgende oversikt over ICA moduler:
 <br>
+
 ![alt text](https://github.com/Zwirc/IS-105/blob/master/HowTo/Gogland.PNG "Wapp")
 <br> Nyttige funksjoner:
 Gogland hjelper deg automatisk å finne Go, og du kan enkelt kjøre go filer fra Gogland.
