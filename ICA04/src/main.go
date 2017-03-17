@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"bufio"
 	"os"
+	"path/filepath"
 )
 
 //////////////////////////////////
@@ -14,7 +15,7 @@ import (
 //////////////////////////////////
 
 // Endre source!
-const source = "C:/OneDrive/Skole/ICA/ICA04/src/"
+const source = "ICA04/src/"
 
 // Import
 // "github.com/mozu0/huffman"1
@@ -101,6 +102,10 @@ func main() {
 	}
 }
 func menu() {
+	p, _ := filepath.Abs(" /")
+	fmt.Println("Root path:" + p)
+	s, _ := filepath.Abs(source)
+	fmt.Println("Source path:" + s)
 	fmt.Println("Skriv nummer på Oppgave!\nAlternativer:\n \n" +
 		"hjelp = Viser menyen \n" +
 		"exit = Avslutter programmet \n\n" +
