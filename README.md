@@ -20,6 +20,7 @@ Du lager ny fil ved å høyre-klikke på mappen du ønsker filen i, og velg Go F
 <br>
 <br>
 Gogland har også autofullfør  funksjon:<br>
+
 ![alt text](https://github.com/Zwirc/IS-105/blob/master/HowTo/Autofullfor.png "Wapp")
 <br>
 Når du kjører en main.go fil, har du mulighet til å gi input og teste om programmet fungerer:
