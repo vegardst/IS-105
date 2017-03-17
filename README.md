@@ -2,10 +2,10 @@
 #### Hvor starter jeg?
 Alle prosjekt er laget under ICA som root source.
 <br>
-1) Last ned GoLang på: https://golang.org/dl/
-2) Last ned prosjektet lokalt: git clone LINK-TIL-REPO
-3) Anbefaler å åpne prosjektet i Go IDE fra JetBrains: https://www.jetbrains.com/go/ 
-4) Når du har åpnet prosjektet i Gogland, ser du følgende oversikt over ICA moduler:
+ Last ned GoLang på: https://golang.org/dl/
+Last ned prosjektet lokalt: git clone LINK-TIL-REPO
+ Anbefaler å åpne prosjektet i Go IDE fra JetBrains: https://www.jetbrains.com/go/ 
+Når du har åpnet prosjektet i Gogland, ser du følgende oversikt over ICA moduler:
 <br>
 ![alt text](https://github.com/Zwirc/IS-105/blob/master/HowTo/Gogland.png "Wapp")
 <br> Nyttige funksjoner:
