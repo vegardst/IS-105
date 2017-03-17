@@ -1,17 +1,21 @@
-#Oppgaver for IS-105
-#### Hvor starter jeg?
+<h1>ppgaver for IS-105</h1>
+<h2>Hvor starter jeg?</h2>
 Alle prosjekt er laget under ICA som root source.
 <br>
- Last ned GoLang på: https://golang.org/dl/
-Last ned prosjektet lokalt: git clone LINK-TIL-REPO
- Anbefaler å åpne prosjektet i Go IDE fra JetBrains: https://www.jetbrains.com/go/ 
-Når du har åpnet prosjektet i Gogland, ser du følgende oversikt over ICA moduler:
+1. Last ned GoLang på: https://golang.org/dl/
+<br>
+2. Last ned prosjektet lokalt: git clone LINK-TIL-REPO
+<br>
+3. Anbefaler å åpne prosjektet i Go IDE fra JetBrains: https://www.jetbrains.com/go/ 
+<br>
+4.Når du har åpnet prosjektet i Gogland, ser du følgende oversikt over ICA moduler:
 <br>
 ![alt text](https://github.com/Zwirc/IS-105/blob/master/HowTo/Gogland.PNG "Wapp")
 <br> Nyttige funksjoner:
 Gogland hjelper deg automatisk å finne Go, og du kan enkelt kjøre go filer fra Gogland.
 <br>
 Det er også mulighet for å åpne terminal direkte i Gogland, eller automatisk pushe til Git repoen din.<br>
+
 ![alt text](https://github.com/Zwirc/IS-105/blob/master/HowTo/Gogland2.PNG "Wapp")
 
 <br>
@@ -27,7 +31,7 @@ Gogland har også autofullfør  funksjon:<br>
 Når du kjører en main.go fil, har du mulighet til å gi input og teste om programmet fungerer:
 ![alt text](https://github.com/Zwirc/IS-105/blob/master/HowTo/Kjoring-Av-MainGO.PNG "Wapp")
 
-<h1>How to git?</h1>
+<h2>How to git?</h2>
 <br> Step by step:
 <br> Gå inn på mappen dere vil "lagre" Repoen på. (f.eks mkdir GitGroup  -> cd GitGroup)
 <br> 1. Last ned med git clone kommandoen
