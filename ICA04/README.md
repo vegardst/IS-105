@@ -22,8 +22,7 @@ Grunnen til dette, er som beskrevet i linken at forskjellige operativsystem har 
 b) Her har jeg laget tre metoder i filehandling.go som sjekker om text1 og text2 har linjeskift, og gir deg muligheten til å skrive inn egen filbane ved hjelp av scanner.
 ![alt text](https://github.com/Zwirc/IS-105/blob/master/ICA04/vedlegg/oppgave1b.PNG "Wapp")
 #### Oppgave 2
-a) Se Oppgave1.go
-Se veldegsmappen for eksempler.
+a) Se Oppgave2.go
 <br><br>
 b) ![alt text](https://github.com/Zwirc/IS-105/blob/master/ICA04/vedlegg/oppgave2b.PNG "Wapp")
 <br>

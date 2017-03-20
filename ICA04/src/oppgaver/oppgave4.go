@@ -5,12 +5,14 @@ package oppgaver
 // 	2017, 	Zwirc		//
 //////////////////////////////////
 import (
+	"./huffman"
 	"text/tabwriter"
 	"os"
 	"fmt"
 	"strconv"
-	"github.com/mozu0/huffman"
 )
+
+var huffstring []string
 
 func Oppgave4a() {
 	/*
@@ -40,7 +42,7 @@ func Oppgave4d() {
 }
 
 func Oppgave4e() {
-
+	EncodeDecore()
 }
 
 // Oppgave 4a
@@ -98,34 +100,24 @@ func UIAinfo() {
 }
 
 // Oppgave 4c
-// Importerer "github.com/mozu0/huffman"
 // Skriver så ut resultatet i table
 func UIAhuffman() {
-	HI := 1829
-	HP := 1525
-	K := 420
-	TR := 2166
-	L := 1506
-	OS := 3098
+	//HI := 1829
+	//HP := 1525
+	//K := 420
+	//TR := 2166
+	//L := 1506
+	//OS := 3098
 
-	//HIb  := 11100100101
-	//HPb := 10111110101
-	//Kb := 110100100
-	//TRb := 100001110110
-	//Lb := 10111100010
-	//OSb := 110000011010
-
-	all := []int{HI, HP, K, TR, L, OS}
-	huffstring := huffman.FromInts(all)
 	w := tabwriter.NewWriter(os.Stdout, 0, 0, 0, ' ', tabwriter.AlignRight|tabwriter.Debug)
 	fmt.Fprintln(w, "Fakulitet \t Informasjon \t")
 	fmt.Fprintln(w, "\t\t")
-	fmt.Fprintln(w, "Helse og Idrettsdag \t", huffstring[0], " \t")
-	fmt.Fprintln(w, "Humaniora og pedagogikk \t ", huffstring[1], " \t")
-	fmt.Fprintln(w, "Kunstfag \t ", huffstring[2], " \t")
-	fmt.Fprintln(w, "Teknologi og realfag \t ", huffstring[3], " \t")
-	fmt.Fprintln(w, "Lærerutdanning \t ", huffstring[4], " \t")
-	fmt.Fprintln(w, "Økonomi og samfunnsvitenskap \t", huffstring[5], " \t")
+	fmt.Fprintln(w, "Helse og Idrettsdag \t", "111", " \t")
+	fmt.Fprintln(w, "Humaniora og pedagogikk \t ", "110", " \t")
+	fmt.Fprintln(w, "Kunstfag \t ", "000", " \t")
+	fmt.Fprintln(w, "Teknologi og realfag \t ", "01", " \t")
+	fmt.Fprintln(w, "Lærerutdanning \t ", "001", " \t")
+	fmt.Fprintln(w, "Økonomi og samfunnsvitenskap \t", "10", " \t")
 	w.Flush()
 
 }
@@ -142,6 +134,35 @@ func UIAaverage() {
 	fmt.Print(strconv.FormatInt(int64(tott), 2))
 	fmt.Println("")
 }
+
+// Oppgave 4e
+func EncodeDecore(){
+	//	A	         Helse og Idrettsdag 	1829       |        111  |
+	//	B	     Humaniora og pedagogikk	 1525      |        110  |
+	//	C	                    Kunstfag 	293          |        000  |
+	//	D	        Teknologi og realfag	 1337       |         01  |
+	//	E	              Lærerutdanning 	1158        |        001  |
+	//	F	Økonomi og samfunnsvitenskap 	2398         |         10  |
+
+	huffmancode := make(map[string]int)
+	huffmancode["Helse og Idrettsdag "] = 1829
+	huffmancode["Humaniora og pedagogikk"] = 1525
+	huffmancode["Kunstfag"] = 293
+	huffmancode["Teknologi og realfag"] = 1337
+	huffmancode["Lærerutdanning"] = 1158
+	huffmancode["Økonomi og samfunnsvitenskap"] = 2398
+
+	tree := huffman.BuildTree(huffmancode)
+
+	// print out results
+	w := tabwriter.NewWriter(os.Stdout, 0, 100, 0, ' ', tabwriter.AlignRight|tabwriter.Debug)
+	fmt.Fprintln(w, "Verdi \t Huffman \t Fakulitet \t")
+	w.Flush()
+	huffman.PrintCodes(tree, []byte{})
+
+
+}
+
 
 //////////////////
 // EXPERIMENTAL //
