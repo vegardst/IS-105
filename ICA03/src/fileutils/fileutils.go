@@ -14,6 +14,7 @@ func FileToByteslice(filename string) []byte {
 	if err != nil {
 		log.Fatal(err)
 	}
+
 	finfo, err := file.Stat()
 	if err != nil {
 		log.Fatal(err)

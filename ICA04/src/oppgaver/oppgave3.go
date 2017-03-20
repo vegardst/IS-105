@@ -23,12 +23,12 @@ func Oppgave3a() {
 		"os.Open" +
 		"os.Chmod")
 }
-func Oppgave3b(source string) {
-	fmt.Println("Skriv inn filen du ønsker å scanne (root source)")
+func Oppgave3b() {
+	fmt.Println("Skriv inn filen du ønsker å scanne:")
 	var filelenght = bufio.NewScanner(os.Stdin)
 	var fileinput string = "Ingen fil valgt"
 	for filelenght.Scan() {
-		fileinput = source + string(filelenght.Text())
+		fileinput = string(filelenght.Text())
 		break
 	}
 

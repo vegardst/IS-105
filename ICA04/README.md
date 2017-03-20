@@ -14,21 +14,21 @@ som vi finner igjen i ASCII kode tabellen:
 10	012	0A	00001010	LF	&#010;	 	Line Feed 
 13	015	0D	00001101	CR	&#013;	 	Carriage Return
 ```
+![alt text](https://github.com/Zwirc/IS-105/blob/master/ICA04/vedlegg/oppgave1a.PNG "Wapp")
 
 Grunnen til dette, er som beskrevet i linken at forskjellige operativsystem har brukt forskjellig kode for å indikere linjeskifte.
 <br>Kilde: http://stackoverflow.com/questions/1761051/difference-between-n-and-r
 
 b) Her har jeg laget tre metoder i filehandling.go som sjekker om text1 og text2 har linjeskift, og gir deg muligheten til å skrive inn egen filbane ved hjelp av scanner.
-
+![alt text](https://github.com/Zwirc/IS-105/blob/master/ICA04/vedlegg/oppgave1b.PNG "Wapp")
 #### Oppgave 2
-a) Her "os" pakken og koden ligger i fileinfo.go<br>
-Se veldegsmappen for eksempler. Jeg slet dog med å velge snarveier som input.
-<br>SELFNOTE: HUSK Å LEGG TIL: Unix block device<br>
+a) Se Oppgave1.go
+Se veldegsmappen for eksempler.
+<br><br>
+b) ![alt text](https://github.com/Zwirc/IS-105/blob/master/ICA04/vedlegg/oppgave2b.PNG "Wapp")
 <br>
-b) 
 <br>
-<br>
-c)
+c) Se build mappen under source
 #### Oppgave 3
 a) Ved bruk av os og ioutil pakkene kan man behandle filer.
 I disse pakken finner vi metoder som kan gjøre det meste med filer. Eksempler:<br>
@@ -70,6 +70,8 @@ b)  Fakulitetet Kunstfag får minst informasjon som sett over.
 ```
 <br>
 c) Huffmancode for alle fakulitet <br>
+
+![alt text](https://github.com/Zwirc/IS-105/blob/master/ICA04/vedlegg/huffman.PNG "Wapp")
 
 ```
                    Fakulitet | Informasjon |

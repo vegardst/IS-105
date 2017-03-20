@@ -12,12 +12,12 @@ import (
 )
 
 // Oppgave 2
-func Oppgave2a(source string) {
+func Oppgave2a() {
 	fmt.Println("Skriv filbane på filen du vil scanne: (Root soruce definert i var)")
 	var fileinfo = bufio.NewScanner(os.Stdin)
 	var fileinput string = "Ingen fil valgt"
 	for fileinfo.Scan() {
-		fileinput = source + string(fileinfo.Text())
+		fileinput = string(fileinfo.Text())
 		break
 	}
 	fileInfo(fileinput)
@@ -37,7 +37,7 @@ func Oppgave2c() {
 	//
 	//
 	//
-	fmt.Println("Filene er bygget og ligger i out mappen.")
+	fmt.Println("Filene er bygget og ligger i builds mappen.")
 	fmt.Println("Alternativ: linux, mac, windows")
 }
 

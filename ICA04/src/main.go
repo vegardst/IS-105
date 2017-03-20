@@ -15,7 +15,6 @@ import (
 //////////////////////////////////
 
 // Endre source!
-const source = "ICA04/src/"
 
 // Import
 // "github.com/mozu0/huffman"1
@@ -32,17 +31,17 @@ func main() {
 			return
 		case "1a":
 			fmt.Println("Oppgave 1a:");
-			oppgaver.Oppgave1a(source);
+			oppgaver.Oppgave1a();
 			ferdig();
 			break
 		case "1b":
 			fmt.Println("Oppgave 1b:");
-			oppgaver.Oppgave1b(source);
+			oppgaver.Oppgave1b();
 			ferdig();
 			break
 		case "2a":
 			fmt.Println("Oppgave 2a:");
-			oppgaver.Oppgave2a(source);
+			oppgaver.Oppgave2a();
 			ferdig();
 			break
 		case "2b":
@@ -62,7 +61,7 @@ func main() {
 			break
 		case "3b":
 			fmt.Println("Oppgave 3b:");
-			oppgaver.Oppgave3b(source);
+			oppgaver.Oppgave3b();
 			ferdig();
 			break
 		case "3c":
@@ -104,8 +103,7 @@ func main() {
 func menu() {
 	p, _ := filepath.Abs(" /")
 	fmt.Println("Root path:" + p)
-	s, _ := filepath.Abs(source)
-	fmt.Println("Source path:" + s)
+
 	fmt.Println("Skriv nummer på Oppgave!\nAlternativer:\n \n" +
 		"hjelp = Viser menyen \n" +
 		"exit = Avslutter programmet \n\n" +

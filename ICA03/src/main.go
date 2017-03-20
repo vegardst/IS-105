@@ -23,7 +23,6 @@ import (
 var scanner = bufio.NewScanner(os.Stdin)
 
 // Endre source til din egen source!
-const source = "ICA03/src/"
 
 func main() {
 	menu()
@@ -104,8 +103,8 @@ func main() {
 func menu(){
 	p, _ := filepath.Abs(" /")
 	fmt.Println("Root path:" + p)
-	s, _ := filepath.Abs(source)
-	fmt.Println("Source path:" + s)
+
+
 	fmt.Println("Skriv nummer på Oppgave!\nAlternativer:\n \n" +
 		"hjelp = Viser menyen \n" +
 		"exit = Avslutter programmet \n\n" +
@@ -165,26 +164,26 @@ func oppgave3a(){
 	convert.Utf8()
 }
 func oppgave3b(){
-	byteslice1 := fileutils.FileToByteslice(source +"files/lang01.wl")
+	byteslice1 := fileutils.FileToByteslice("files/lang01.wl")
 	fmt.Println(byteslice1)
-	byteslice2 := fileutils.FileToByteslice(source +"files/lang02.wl")
+	byteslice2 := fileutils.FileToByteslice("files/lang02.wl")
 	fmt.Println(byteslice2)
-	byteslice3 := fileutils.FileToByteslice(source +"files/lang03.wl")
+	byteslice3 := fileutils.FileToByteslice("files/lang03.wl")
 	fmt.Println(byteslice3)
 	fmt.Println("Skriv 3b2 for symboler")
 
 }
 func oppgave3b2(){
-	byteslice1 := fileutils.FileToByteslice(source +"files/lang01.wl")
+	byteslice1 := fileutils.FileToByteslice("files/lang01.wl")
 	fmt.Printf("Slice 1: %s \n", []byte(byteslice1))
-	byteslice2 := fileutils.FileToByteslice(source +"files/lang02.wl")
+	byteslice2 := fileutils.FileToByteslice("files/lang02.wl")
 	fmt.Printf("Slice 2: %s \n", []byte(byteslice2))
-	byteslice3 := fileutils.FileToByteslice(source +"files/lang03.wl")
+	byteslice3 := fileutils.FileToByteslice("files/lang03.wl")
 	fmt.Printf("Slice 3: %s \n", []byte(byteslice3))
 
 }
 func oppgave3c() {
-	treasureString := source+"treasure/treasure.txt"
+	treasureString := "treasure/treasure.txt"
 	byteslice := treasure.PrintTreasure(treasureString)
 	fmt.Printf("Slice: %x \n", []byte(byteslice))
 

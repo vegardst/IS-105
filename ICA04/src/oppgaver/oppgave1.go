@@ -16,10 +16,10 @@ import (
 
 // For oppgave 1a
 // Lik metode som i forige ICA, som leser fil og returnerer den som byteslice
-func Oppgave1a(source string) {
+func Oppgave1a() {
 	// Bruker samme metode som vi fikk i ICA03 for å gjøre om text filene til byteslice's
-	text1 := fileToByteslice(source + "files/text1.txt")
-	text2 := fileToByteslice(source + "files/text2.txt")
+	text1 := fileToByteslice("files/text1.txt")
+	text2 := fileToByteslice( "files/text2.txt")
 	// Printer ut innholdet for hver slice
 	fmt.Println("Utskrift %%X, base15:")
 	fmt.Printf("ByteSlice Text1: %X \n", []byte(text1))
@@ -34,9 +34,9 @@ func Oppgave1a(source string) {
 	//	fmt.Printf("%X %+q %b \n", text1[i], text1[i], text1[i])
 	//}
 }
-func Oppgave1b(source string) {
-	text1 := source + "files/text1.txt"
-	text2 := source + "files/text2.txt"
+func Oppgave1b() {
+	text1 :=  "files/text1.txt"
+	text2 :=  "files/text2.txt"
 	// Sjekker for linjeskift i oppgaver klassen.
 	fmt.Println("Text 1: ", checkLineshift(text1))
 	fmt.Println("Text 2: ", checkLineshift(text2))
@@ -46,14 +46,14 @@ func Oppgave1b(source string) {
 	var filescanner = bufio.NewScanner(os.Stdin)
 	var fileinput string = "Ingen fil valgt"
 	for filescanner.Scan() {
-		fileinput = source + string(filescanner.Text())
+		fileinput =  string(filescanner.Text())
 		break
 	}
 	fmt.Println("Din fil:", fileinput)
 	fmt.Println("Scanning : ", checkLineshift(fileinput))
 
 }
-
+// Metode som gjør filen til byteslice
 func fileToByteslice(filename string) []byte {
 	file, err := os.Open(filename)
 	if err != nil {
