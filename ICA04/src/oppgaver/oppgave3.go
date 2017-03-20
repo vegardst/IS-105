@@ -94,9 +94,9 @@ func sortAndPrint(m map[int]string) {
 	sort.Ints(keys)
 
 	//// Print Alle:
-	for _, k := range keys {
-		fmt.Println("Key:", k, "Value:", m[k])
-	}
+	//for _, k := range keys {
+	//	fmt.Println("Key:", k, "Value:", m[k])
+	//}
 
 	// Print 5 største:
 	fmt.Println("5 mest brukte runes:")

@@ -39,7 +39,9 @@ os.OpenFile
 os.Open
 os.Chmod
 ```
-b) Se vedlegg
+b) Total antall runer og antall for fem runes som forekommer mest i fil:
+<br>
+![alt text](https://github.com/Zwirc/IS-105/blob/master/ICA04/vedlegg/oppgave3b.PNG "Wapp")
 <br>
 c) Se vedlegg
 #### Oppgave 4
