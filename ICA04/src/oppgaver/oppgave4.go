@@ -46,9 +46,18 @@ func Oppgave4e() {
 }
 
 // Oppgave 4a
+var TOT float64 = 10544
+var HI float64 = 1829
+var HP float64 = 1525
+var K float64 = 420
+var TR float64 = 2166
+var L float64 = 1506
+var OS float64 = 3098
+var hundred float64 = 100
+
 func UIAlist() {
 	w := tabwriter.NewWriter(os.Stdout, 0, 0, 0, ' ', tabwriter.AlignRight|tabwriter.Debug)
-	fmt.Fprintln(w, "Fakulitet \t år 2014 \t år 2015 \t")
+	fmt.Fprintln(w, "Fakulitet \t år 2008 \t år 2015 \t")
 	fmt.Fprintln(w, "\t\t")
 	fmt.Fprintln(w, "Helse og Idrettsdag \t 1420 \t 1829 \t")
 	fmt.Fprintln(w, "Humanoira og pedagogikk \t 1182 \t 1525 \t")
@@ -57,14 +66,6 @@ func UIAlist() {
 	fmt.Fprintln(w, "Lærerutdanning \t 1158 \t 1506 \t")
 	fmt.Fprintln(w, "Økonomi og samfunnsvitenskap \t 2398 \t 3098 \t")
 	w.Flush()
-	var TOT float64 = 10544
-	var HI float64 = 1829
-	var HP float64 = 1525
-	var K float64 = 420
-	var TR float64 = 2166
-	var L float64 = 1506
-	var OS float64 = 3098
-	var hundred float64 = 100
 
 	// Sannsynlighet = Muligheter / total * 100 %
 	fmt.Println()
@@ -81,34 +82,22 @@ func UIAlist() {
 
 // Oppgave 4b
 func UIAinfo() {
-	var HI int64 = 1829
-	var HP int64 = 1525
-	var K int64 = 420
-	var TR int64 = 2166
-	var L int64 = 1506
-	var OS int64 = 3098
+
 	w := tabwriter.NewWriter(os.Stdout, 0, 0, 0, ' ', tabwriter.AlignRight|tabwriter.Debug)
 	fmt.Fprintln(w, "Fakulitet \t Informasjon \t")
 	fmt.Fprintln(w, "\t\t")
-	fmt.Fprintln(w, "Helse og Idrettsdag \t", strconv.FormatInt(HI, 2), " \t")
-	fmt.Fprintln(w, "Humaniora og pedagogikk \t ", strconv.FormatInt(HP, 2), " \t")
-	fmt.Fprintln(w, "Kunstfag \t ", strconv.FormatInt(K, 2), " \t")
-	fmt.Fprintln(w, "Teknologi og realfag \t ", strconv.FormatInt(TR, 2), " \t")
-	fmt.Fprintln(w, "Lærerutdanning \t ", strconv.FormatInt(L, 2), " \t")
-	fmt.Fprintln(w, "Økonomi og samfunnsvitenskap \t", strconv.FormatInt(OS, 2), " \t")
+	fmt.Fprintln(w, "Helse og Idrettsdag \t", strconv.FormatInt(int64(HI), 2), " \t")
+	fmt.Fprintln(w, "Humaniora og pedagogikk \t ", strconv.FormatInt(int64(HP), 2), " \t")
+	fmt.Fprintln(w, "Kunstfag \t ", strconv.FormatInt(int64(K), 2), " \t")
+	fmt.Fprintln(w, "Teknologi og realfag \t ", strconv.FormatInt(int64(TR), 2), " \t")
+	fmt.Fprintln(w, "Lærerutdanning \t ", strconv.FormatInt(int64(L), 2), " \t")
+	fmt.Fprintln(w, "Økonomi og samfunnsvitenskap \t", strconv.FormatInt(int64(OS), 2), " \t")
 	w.Flush()
 }
 
 // Oppgave 4c
 // Skriver så ut resultatet i table
 func UIAhuffman() {
-	//HI := 1829
-	//HP := 1525
-	//K := 420
-	//TR := 2166
-	//L := 1506
-	//OS := 3098
-
 	w := tabwriter.NewWriter(os.Stdout, 0, 0, 0, ' ', tabwriter.AlignRight|tabwriter.Debug)
 	fmt.Fprintln(w, "Fakulitet \t Informasjon \t")
 	fmt.Fprintln(w, "\t\t")
@@ -137,20 +126,14 @@ func UIAaverage() {
 
 // Oppgave 4e
 func EncodeDecore(){
-	//	A	         Helse og Idrettsdag 	1829       |        111  |
-	//	B	     Humaniora og pedagogikk	 1525      |        110  |
-	//	C	                    Kunstfag 	293          |        000  |
-	//	D	        Teknologi og realfag	 1337       |         01  |
-	//	E	              Lærerutdanning 	1158        |        001  |
-	//	F	Økonomi og samfunnsvitenskap 	2398         |         10  |
 
 	huffmancode := make(map[string]int)
-	huffmancode["Helse og Idrettsdag "] = 1829
-	huffmancode["Humaniora og pedagogikk"] = 1525
-	huffmancode["Kunstfag"] = 293
-	huffmancode["Teknologi og realfag"] = 1337
-	huffmancode["Lærerutdanning"] = 1158
-	huffmancode["Økonomi og samfunnsvitenskap"] = 2398
+	huffmancode["Helse og Idrettsdag "] = int(HI)
+	huffmancode["Humaniora og pedagogikk"] = int(HP)
+	huffmancode["Kunstfag"] = int(K)
+	huffmancode["Teknologi og realfag"] = int(TR)
+	huffmancode["Lærerutdanning"] = int(L)
+	huffmancode["Økonomi og samfunnsvitenskap"] = int(OS)
 
 	tree := huffman.BuildTree(huffmancode)
 
@@ -159,10 +142,7 @@ func EncodeDecore(){
 	fmt.Fprintln(w, "Verdi \t Huffman \t Fakulitet \t")
 	w.Flush()
 	huffman.PrintCodes(tree, []byte{})
-
-
 }
-
 
 //////////////////
 // EXPERIMENTAL //
