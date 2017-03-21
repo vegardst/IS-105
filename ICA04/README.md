@@ -93,7 +93,72 @@ Filen er ikke  'symbolic link'
 ```
 
 <br>
-c) Se build mappen under source
+c) Filene er bygd for hvert system og ligger under src\oppgaver\fileinfo\builds
+Test av pg100.txt på windows:
+
+```
+Skriv filbane på filen du vil scanne:
+C:\OneDrive\Skole\ICA\ICA04\src\files\pg100.txt
+Scanner fil......
+Bytes:  5.589889e+06
+Kibibytes:  5589.889
+Mibibytes:  5.589889
+Mibibytes:  0.005589889
+Dette er en fil
+Filrettigheter:  -rw-rw-rw-
+Filen er ikke 'append only'
+Filen er ikke 'name pipe'
+Filen er ikke  'device oppgaver'
+Filen er ikke  ' Unix character device'
+Filen er ikke  'symbolic link'
+```
+
+<br>
+Test av pg100.txt på linux:
+
+```
+Skriv filbane på filen du vil scanne:
+pg100.txt
+Bytes:  5.589889e+06
+Kibibytes:  5589.889
+Mibibytes:  5.589889
+Mibibytes:  0.005589889
+Dette er en fil
+Filrettigheter:  -rw-rw-r--
+Filen er ikke 'append only'
+Filen er ikke 'name pipe'
+Filen er ikke  'device oppgaver'
+Filen er ikke  ' Unix character device'
+Filen er ikke  'symbolic link'
+```
+
+
+<br>
+Test av pg100.txt på mac:
+
+```
+Skriv filbane på filen du vil scanne:
+gitGroup/IS-105-Gruppe1/ICA04/src/files/pg100.txt
+Scanner fil......
+Bytes:  5.4651e+06
+Kibibytes:  5465.1
+Mibibytes:  5.4651
+Mibibytes:  0.0054651
+Dette er en fil
+Filrettigheter:  -rw-r--r--
+Filen er ikke 'append only'
+Filen er ikke 'name pipe'
+Filen er ikke  'device oppgaver'
+Filen er ikke  ' Unix character device'
+Filen er ikke  'symbolic link'
+logout
+Saving session...completed.
+
+```
+
+<br>
+Ved print av filen pg100.txt fant vi ingen forskjeller ved å kjøre samme go fil på alle tre platformer.
+
 #### Oppgave 3
 a) Ved bruk av os og ioutil pakkene kan man behandle filer.
 I disse pakken finner vi metoder som kan gjøre det meste med filer. Eksempler:<br>
@@ -111,7 +176,7 @@ Oppgave 3b:
 Skriv inn filen du ønsker å scanne:
 files/pg100.txt
 Antall linjeskift i filen: 800
-0
+
 5 mest brukte runes:
 Antall: 6679 Rune:
 Antall: 2718 Rune: e
@@ -119,8 +184,10 @@ Antall: 1962 Rune: t
 Antall: 1615 Rune: o
 Antall: 1372 Rune: s
 ```
+<br>
+c) ** FYLL INN **
+    
 
-c) Se vedlegg
 #### Oppgave 4
 a) Sannsynligheten regner vi ved å ta Muligheter / total * 100 %
 ```
@@ -164,5 +231,8 @@ c) Huffmancode for alle fakulitet <br>
 
 <br>
 d) Antall * (Lengden på melding * sansynlighet) + (Lengden på ......
-<br>
+
+```
+100*(3*0.1734) + (3 * 0.1446) + (3 * 0.0398) + (2 * 0.2054) + (3 * 0.1428) + (2 * 0.2938)<br>
+```
    Lengde på melding til 100 stk fra huffman bit lengde: 54
