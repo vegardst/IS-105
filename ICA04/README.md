@@ -14,13 +14,34 @@ som vi finner igjen i ASCII kode tabellen:
 10	012	0A	00001010	LF	&#010;	 	Line Feed 
 13	015	0D	00001101	CR	&#013;	 	Carriage Return
 ```
-![alt text](https://github.com/Zwirc/IS-105/blob/master/ICA04/vedlegg/oppgave1a.PNG "Wapp")
+<br>
 
+Resultat oppgave 1a:
+```
+Oppgave 1a:
+Utskrift %%X, base15:
+ByteSlice Text1: 546573746572206C696E6A65736B6966742E0D0A4F6720656E2074696C202E2E2E0D0A4F6720656E2074696C202E2E2E0D0A4F6720656E2074696C202E2E2E0D0A
+ByteSlice Text2: 546573746572206C696E6A65736B6966742E0D0A4F6720656E2074696C202E2E2E0D0A4F6720656E2074696C202E2E2E0D0A4F6720656E2074696C202E2E2E0D0A
+Utskrivt %%q , characters
+ByteSlice Text1: "Tester linjeskift.\r\nOg en til ...\r\nOg en til ...\r\nOg en til ...\r\n"
+ByteSlice Text2: "Tester linjeskift.\r\nOg en til ...\r\nOg en til ...\r\nOg en til ...\r\n"
+```
 Grunnen til dette, er som beskrevet i linken at forskjellige operativsystem har brukt forskjellig kode for å indikere linjeskifte.
 <br>Kilde: http://stackoverflow.com/questions/1761051/difference-between-n-and-r
 
-b) Her har jeg laget tre metoder i filehandling.go som sjekker om text1 og text2 har linjeskift, og gir deg muligheten til å skrive inn egen filbane ved hjelp av scanner.
-![alt text](https://github.com/Zwirc/IS-105/blob/master/ICA04/vedlegg/oppgave1b.PNG "Wapp")
+b) Her har jeg laget tre metoder til oppgaven som sjekker om text1 og text2 har linjeskift, og gir deg muligheten til å skrive inn egen filbane ved hjelp av scanner.
+<br> Resultat oppgave 1b:
+
+```
+Oppgave 1b:
+Text 1:  Teksten inneholder LineBreak og CarriageReturn
+Text 2:  Teksten inneholder LineBreak og CarriageReturn
+Skriv filbane på filen du vil scanne: (Root soruce definert i var)
+files/text1.txt
+Din fil: files/text1.txt
+Scanning :  Teksten inneholder LineBreak og CarriageReturn
+```
+
 #### Oppgave 2
 a) Se Oppgave2.go
 <br><br>
@@ -40,9 +61,20 @@ os.Open
 os.Chmod
 ```
 b) Total antall runer og antall for fem runes som forekommer mest i fil:
-<br>
-![alt text](https://github.com/Zwirc/IS-105/blob/master/ICA04/vedlegg/oppgave3b.PNG "Wapp")
-<br>
+```
+Oppgave 3b:
+Skriv inn filen du ønsker å scanne:
+files/pg100.txt
+Antall linjeskift i filen: 800
+0
+5 mest brukte runes:
+Antall: 6679 Rune:
+Antall: 2718 Rune: e
+Antall: 1962 Rune: t
+Antall: 1615 Rune: o
+Antall: 1372 Rune: s
+```
+
 c) Se vedlegg
 #### Oppgave 4
 a) Sannsynligheten regner vi ved å ta Muligheter / total * 100 %
