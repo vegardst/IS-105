@@ -188,9 +188,9 @@ Antall: 1372 Rune: s
 c) Kjør benchmark "go test -bench=." i benchmark mappen
 
 ```
-    3000            463270 ns/op
+    5000            482674 ns/op            1811 B/op         39 allocs/op
 PASS
-ok      _/C_/OneDrive/Skole/ICA/ICA04/src/oppgaver/benchmark    3.315s
+ok      _/C_/OneDrive/Skole/ICA/ICA04/src/oppgaver/benchmark    2.619s
 ```
 
 #### Oppgave 4
