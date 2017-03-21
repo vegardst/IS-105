@@ -43,10 +43,55 @@ Scanning :  Teksten inneholder LineBreak og CarriageReturn
 ```
 
 #### Oppgave 2
-a) Se Oppgave2.go
-<br><br>
-b) ![alt text](https://github.com/Zwirc/IS-105/blob/master/ICA04/vedlegg/oppgave2b.PNG "Wapp")
-<br>
+a) Skriv inn filen du ønsker å scanne.
+```
+Oppgave 2a:
+Skriv filbane på filen du vil scanne: (Root soruce definert i var)
+files/pg100.txt
+Informasjon om filen: files/pg100.txt
+Bytes:  5.589889e+06
+Kibibytes:  5589.889
+Mibibytes:  5.589889
+Mibibytes:  0.005589889
+Dette er en fil
+Filrettigheter:  -rw-rw-rw-
+Filen er ikke 'append only'
+Filen er ikke 'name pipe'
+Filen er ikke  'device oppgaver'
+Filen er ikke  ' Unix character device'
+Filen er ikke  'symbolic link'
+```
+
+b) På linux instansen:
+```
+Oppgave 2b:
+Oppgaven må gjøres på linux
+/dev/stdin​ :
+Informasjon om filen: /dev/stdin
+Bytes:  0
+Kibibytes:  0
+Mibibytes:  0
+Mibibytes:  0
+Filrettigheter:  Dcrw--w----
+Filen er ikke 'append only'
+Filen er ikke 'name pipe'
+Filen er 'device oppgaver'
+Filen er ' Unix character device'
+Filen er ikke  'symbolic link'
+/dev/ram0 :
+Informasjon om filen: /dev/ram0
+Bytes:  0
+Kibibytes:  0
+Mibibytes:  0
+Mibibytes:  0
+Filrettigheter:  Drw-rw----
+Filen er ikke 'append only'
+Filen er ikke 'name pipe'
+Filen er 'device oppgaver'
+Filen er ikke  ' Unix character device'
+Filen er ikke  'symbolic link'
+```
+
 <br>
 c) Se build mappen under source
 #### Oppgave 3

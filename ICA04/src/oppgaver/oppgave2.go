@@ -13,7 +13,7 @@ import (
 
 // Oppgave 2
 func Oppgave2a() {
-	fmt.Println("Skriv filbane på filen du vil scanne: (Root soruce definert i var)")
+	fmt.Println("Skriv filbane på filen du vil scanne:")
 	var fileinfo = bufio.NewScanner(os.Stdin)
 	var fileinput string = "Ingen fil valgt"
 	for fileinfo.Scan() {

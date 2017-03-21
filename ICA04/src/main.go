@@ -14,10 +14,6 @@ import (
 // 	2017, 	Zwirc		//
 //////////////////////////////////
 
-// Endre source!
-
-// Import
-// "github.com/mozu0/huffman"1
 var scanner = bufio.NewScanner(os.Stdin)
 
 func main() {
