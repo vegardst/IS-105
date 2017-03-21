@@ -31,12 +31,6 @@ func Oppgave2b() {
 	fileInfo("/dev/ram0")
 }
 func Oppgave2c() {
-	//
-	//
-	// HUSK Å ENDRE DENNE
-	//
-	//
-	//
 	fmt.Println("Filene er bygget og ligger i builds mappen.")
 	fmt.Println("Alternativ: linux, mac, windows")
 }
@@ -48,7 +42,7 @@ func fileInfo(filename string) {
 }
 
 // Følgende funksjoner er med inspirasjon fra https://golang.org/pkg/os/
-//Oppgave 2a
+// Oppgave 2a
 // Tar string inn og finner info om filen
 func fileStats(filename string) {
 	a, err := os.Stat(filename)

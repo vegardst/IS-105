@@ -14,6 +14,11 @@ import (
 // 	2017, 	Zwirc		//
 //////////////////////////////////
 
+// Bygge til hvert system:
+//GOOS=linux GOARCH=amd64 go build fileinfo.go
+//GOOS=windows GOARCH=amd64 go build fileinfo.go
+//GOOS=darwin GOARCH=amd64 go build fileinfo.go
+
 var scanner = bufio.NewScanner(os.Stdin)
 
 func main() {
@@ -62,7 +67,7 @@ func main() {
 			break
 		case "3c":
 			fmt.Println("Oppgave 3c:");
-			oppgaver.Oppgave3c();
+			oppgaver.Oppgave3c(0);
 			ferdig();
 			break
 		case "4a":

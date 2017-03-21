@@ -41,13 +41,11 @@ func Oppgave3b() {
 	sortAndPrint(m)
 
 }
-func Oppgave3c() {
-	//
-	//
-	// HUSK Å ENDRE DENNE
-	//
-	//
-	fmt.Println("Kjør benchmark på egne filer")
+func Oppgave3c(int int) {
+	fmt.Println("Kjør benchmark go test -bench=. i benchmark mappen")
+	if int == 1 {
+		fileInfo("../../files/pg100.txt")
+	}
 }
 
 // Oppgave 3b (1/3)

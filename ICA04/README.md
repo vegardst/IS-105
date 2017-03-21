@@ -185,8 +185,13 @@ Antall: 1615 Rune: o
 Antall: 1372 Rune: s
 ```
 <br>
-c) ** FYLL INN **
-    
+c) Kjør benchmark "go test -bench=." i benchmark mappen
+
+```
+    3000            463270 ns/op
+PASS
+ok      _/C_/OneDrive/Skole/ICA/ICA04/src/oppgaver/benchmark    3.315s
+```
 
 #### Oppgave 4
 a) Sannsynligheten regner vi ved å ta Muligheter / total * 100 %

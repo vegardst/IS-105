@@ -108,7 +108,6 @@ func UIAhuffman() {
 	fmt.Fprintln(w, "Lærerutdanning \t ", "001", " \t")
 	fmt.Fprintln(w, "Økonomi og samfunnsvitenskap \t", "10", " \t")
 	w.Flush()
-
 }
 
 // Oppgave 4d
