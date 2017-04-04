@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <title>Zwirc.com</title>
+    <link href="web/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="particles-js" onload="initialize()">
+<script src="web/js/index.js"></script>
+
+<div class="ip">
+    <i>About you:<br>
+        IP address: {{ .VisitorIP }}
+        <br>
+        Provider: {{ .UserData.Org }}
+        <br>
+        Country: {{ .UserData.Country }}
+        <br>
+        Region: {{ .UserData.RegionName }}
+        <br>
+        City: {{ .UserData.City }}
+        <br>
+    </i>
+</div>
+<div class="location">
+    <center>
+        <h1><u>GO/JSON test @ Zwirc.com</u></h1>
+        <form id="search" src="/" method="GET">
+            <input type="text" name="city" id="input">
+            <input type="submit" value="Search for a city">
+        </form>
+        <br>
+        Search results for <b>{{ .Weather.Name }}</b>
+        <br>
+        Located in <b>{{ .Country }}</b> , country code <b>{{ .Countrycode }} </b>
+        <br> <font size="2">Population in country (Experimental): {{ .Population }}</font>
+        <br>
+        <br>
+        <div class="weather">
+            <b>Weather:</b> {{ with $w := index .Weather.Weather 0 }}{{ $w.Main }} ({{ $w.Description }}){{ end }}
+            <br>
+            <b>Temperature:</b> {{ .Weather.Main.temp }} ºC
+            <br><b>Wind:</b> {{ .Weather.Wind.speed }} m/s
+        </div>
+        <br>
+        <div class="wiki"> {{ .Wiki }}</div>
+
+        <br>
+        <div class="sources">Sources: http://Wikipedia.org , http://ip-api.com/,
+            https://github.com/VincentGarreau/particles.js, http://openweathermap.org, http://http://population.io/
+    </center>
+    <div id="map">Google map</div>
+
+</div>
+
+<script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key={{ .API.Google }}&callback=initMap"></script>
+<script type="text/javascript">
+    var geocoder;
+    var map;
+    var address = {{ .Weather.Name }};
+    function initialize() {
+        geocoder = new google.maps.Geocoder();
+        var latlng = new google.maps.LatLng(-34.397, 150.644);
+        var myOptions = {
+            zoom: 10,
+            center: latlng,
+            mapTypeControl: true,
+            mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
+            navigationControl: true,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            styles: [
+                {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+                {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+                {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+                {
+                    featureType: 'administrative.locality',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#d59563'}]
+                },
+                {
+                    featureType: 'poi',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#d59563'}]
+                },
+                {
+                    featureType: 'poi.park',
+                    elementType: 'geometry',
+                    stylers: [{color: '#263c3f'}]
+                },
+                {
+                    featureType: 'poi.park',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#6b9a76'}]
+                },
+                {
+                    featureType: 'road',
+                    elementType: 'geometry',
+                    stylers: [{color: '#38414e'}]
+                },
+                {
+                    featureType: 'road',
+                    elementType: 'geometry.stroke',
+                    stylers: [{color: '#212a37'}]
+                },
+                {
+                    featureType: 'road',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#9ca5b3'}]
+                },
+                {
+                    featureType: 'road.highway',
+                    elementType: 'geometry',
+                    stylers: [{color: '#746855'}]
+                },
+                {
+                    featureType: 'road.highway',
+                    elementType: 'geometry.stroke',
+                    stylers: [{color: '#1f2835'}]
+                },
+                {
+                    featureType: 'road.highway',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#f3d19c'}]
+                },
+                {
+                    featureType: 'transit',
+                    elementType: 'geometry',
+                    stylers: [{color: '#2f3948'}]
+                },
+                {
+                    featureType: 'transit.station',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#d59563'}]
+                },
+                {
+                    featureType: 'water',
+                    elementType: 'geometry',
+                    stylers: [{color: '#17263c'}]
+                },
+                {
+                    featureType: 'water',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#515c6d'}]
+                },
+                {
+                    featureType: 'water',
+                    elementType: 'labels.text.stroke',
+                    stylers: [{color: '#17263c'}]
+                }
+            ]
+        };
+        map = new google.maps.Map(document.getElementById("map"), myOptions);
+
+        if (geocoder) {
+            geocoder.geocode({'address': address}, function (results, status) {
+
+                if (status == google.maps.GeocoderStatus.OK) {
+                    if (status != google.maps.GeocoderStatus.ZERO_RESULTS) {
+                        map.setCenter(results[0].geometry.location);
+
+                        var infowindow = new google.maps.InfoWindow(
+                            {
+                                content: '<b>' + address + '</b>',
+                                size: new google.maps.Size(150, 100)
+                            });
+
+                        var marker = new google.maps.Marker({
+                            position: results[0].geometry.location,
+                            map: map,
+                            title: address
+                        });
+                        google.maps.event.addListener(marker, 'click', function () {
+                            infowindow.open(map, marker);
+                        });
+
+                    } else {
+                        alert("No results found");
+                    }
+                } else {
+                    alert("Geocode was not successful for the following reason: " + status);
+                }
+            });
+        }
+    }
+</script>
+
+
+</body>
+</html>
