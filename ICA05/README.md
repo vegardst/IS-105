@@ -1,5 +1,6 @@
 # ICA-05 
 
+Live @ http://zwirc.com 
 ### Systemspesifikasjon
 Systemet vi har utviklet skal kunne gi brukeren informasjon om lokasjon, vær på lokasjon stedet, kart over lokasjonen, lokasjonsinformasjon og informasjon om brukeren som kun brukeren kan se, type IP-adresse, land, by, internettleverandør. Systemet skal inneholde en søkefunksjon slik at brukeren kan søke seg fram til lokasjoner som brukeren ønsker informasjon om. Informasjonen som skal vises er stedsnavn (land og by/sted), landskode, nåværende temperatur, vindstyrke og hvilket vær det er. I tillegg vise relevant informasjon om lokasjonen. Brukeren skal også få opp et kart over valgt lokasjon hvor han også har muligheten til å “dra” seg rundt og zoome i kartet for evt å finne nye lokasjoner hvis han er usikker på steder han ønsker å søke opp. 
  ![alt text](https://github.com/Zwirc/IS-105/blob/master/ICA05/vedlegg/concept.PNG "Wapp")
