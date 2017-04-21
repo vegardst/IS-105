@@ -344,3 +344,96 @@ Formel brukt i oppgave: log2(8/mulige valg)
 
 4) Louise har fått vite alt Lise,Per og Oskar vet = log2(8/1)
 <br>Louse sin informasjon i bits 3 . Louise har 3Bits informasjon og 1 mulig valg
+
+# Oppgave 1.2.3
+
+Alle har tilgang til repository is-105-uke04 og har laget egen branch og lastet opp eksempel filer (Se branch liste: https://github.com/IS-105-GitGroup/is105-uke04 )
+
+Vi brukte følgene mal:
+
+Gå inn på mappen dere vil "lagre" Repoen på. (f.eks mkdir GitGroup -> cd GitGroup) 
+1. Last ned med git clone kommandoen 
+git clone https://github.com/IS-105-GitGroup/is105-uke04.git 
+
+2. Lag en ny branch med deres navn. 
+git checkout -b Navn 
+Du ser nå at du er i branchen ved at branchnavn står etter mappestrukturen: GitGroup/is105-uke04 (Navn) 
+
+3. Opprett en ny .go Fil i Go mappa enten med kommandolinje eller OS brukergrensesnitt. 
+Når du har lagret filen kan du skrive: git status og vil se at filen er rød der. 
+
+4. Legg til filen, commit og last opp. 
+git add . : "." gjør at du legger til alle filer, du kan også skrive filnavn. 
+git commit -m "kommentar" : Commit filen med kommentar 
+git push origin Navn : Laster opp branchen Navn til Repoen vår. 
+
+For å oppdatere lokale filer, kan git pull origin BRANCH-NAVN brukes.
+
+# Oppgave 1.2.4
+
+##### 1) Hvilken fordeler og ulemper har en git-flow-modell med en hovedrepository?
+
+Fordelen med en hovedrepo er at man kan kopiere denne og jobbe separat på forskjellige elementer av koden for så å sammenligne / legge til endringer i hovedrepo når endringene er klare. Ved å bruke en "public" repo er det også enkelt å dele koden, få tilbakemeldinger og se endringer.
+
+ 
+
+Ulempen kan være at andre kan slette nødvendige filer / endre hovedrepo istedenfor test brancher, man kan være uheldig å dele passord og essensiel data mm.
+Andre ulemper kan være at man lager mange repo, har lite dokumentasjon og ender opp med bare rot.
+
+ 
+
+##### 2) Finn ut hva heter objektfiler for de mest brukte platformer (Unix/Linux, MS Windows, Mac OS X)! Hvorfor, etter deres mening, har disse platformene så forskjellige objektfil-formater
+
+ELF brukes for det meste på platformer, ellers har vi:
+
+a.out AIF COFF CMD COM ECOFF GOFF Hunk Mach-O MZ NE OMF OS/360 PE PEF XCOFF
+
+Disee pakkes i typiske kjørbare filer for operativsystemet, f.eks .exe for Windows.
+Andre typiske kjørbare filer er :
+.acm, .ax, .cpl, .dll, .drv, .efi, .mui, .ocx, .scr, .sys, .tsp
+
+Operativsystemene kjører på forskjellig "Architectures":
+Linux (x86, PowerPC, ARM, and others)
+Microsoft Windows (x86, ARM)
+macOS (x86, PowerPC (on 10.5 and below))
+
+ 
+
+##### 3) Hvilke forskjeller er det fra Java og GoLang?
+
+Go - Mindre kode og i stor vekst.
+Go - Mer rettet mot HTTP
+Java - Har fortsatt større community
+Java - Mange frameworks og IDE support
+
+ 
+
+##### 4) Hvilke viktige poeng illustrerer denne øvelsen når det gjelder bruk av et programmeringsmiljø på en platform?
+
+Poenget denne øvelsen illustrerer er siden jeg bygger filen på Windows, så får jeg en kjørbar exe fil.
+
+Med GoLang kan man også "cross compile" ved å sette "GOOS" og "GOARCH" til verdiene for operativsystems arkitekturen programmet skal kjøre på. Dermed "go build -v pakke" 
+
+I motsetning til Java, må vi i dette tilfellet kjøre begge filene hvis vi skal ha de i samme mappe: "go run main.go  log.go" , så velger den main metoden fra main.go for å kjøre, se eksempler under GoLang.
+For mer info se: https://dave.cheney.net/2015/08/22/cross-compilation-with-go-1-5
+
+Skal man kun kjøre bare "main.go" (go run main.go) må filen Log importeres ved å legges i en subfolder dersom vi ikke endrer "%GOPATH%"
+
+
+NB! Om man prøver å importere en mappe der main filen allerede er får man error, import "../GoLang":
+"main.go:5:2: found packages log (log.go) and main (main.go) "
+
+For mer utfyllende info se: http://gowithconfidence-blog.tumblr.com/post/118493925546/getting-started-with-go-workspaces
+
+ 
+
+##### 5) Bruk eksemplet fra https://gobyexample.com/command-line-arguments og lag et utførbart program logcli?, som kan ta et argument (tallet som man skal beregne logaritmen av base 2 for);  Er det hensiktsmessig å legge inn denne filen i git repository? Begrunn svaret!
+
+Filen logcli.go i Oppgaver/GoLang på master branch kjøres ved "go run logcli.go 10 11" der første parameter er LogBase-2 og andre parameter er LogBase-10. Det er også brukt import av "strconv" som konverterer string til Float64 for å bruke denne i math.Log metodene.
+Hvis man har bruk for denne utregningen, er det hensiktsmessig å ha filen i sitt repository slik at man enkelt kan gjøre utregninger senere ved å kalle på metoden.
+
+##### 6) Hva skille pakke log, fra andre pakker i go?
+
+Hver pakke har forskjellige metoder som utfører forskjellige funksjoner.
+
+I dette tilfellet importeres log lokalt, mens fmt er en del av standardbibloteket, og metoder finnes i oversikten
