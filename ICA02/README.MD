@@ -26,7 +26,7 @@ Prosessene som ikke kjører er i tilstanden idle/sleep.
 
 
 #### Hva er maskinvarespesifikasjon til din datamaskin (noter prosessortype, prosessorarkitektur, klokkefrekvens, informasjon om primært minne, størrelse på cache (både L1, L2 og L3 er ønskelig))?
-Har laget en "ComputerInfo.go" fil for å hente ut denne informasjonen for windows / linux. 
+Har laget en "ComputerInfo.go" fil for å hente ut denne informasjonen for windows / linux. (Wmic må være i %path%) 
 
 - Lokal maskinvarespesifikasjoner:Prosessortype: Intel(R) Core(TM) i7-4770K , 4-core 8-threads
 - Prosessorarkitektur: Intel`s Haswell, 64bit
