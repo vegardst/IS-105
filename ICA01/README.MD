@@ -1,6 +1,6 @@
 # Oppgave 1.2.1
 
-#####Konvertering av desimaltall til 2-tallsystemet (binært tallsystem):
+##### Konvertering av desimaltall til 2-tallsystemet (binært tallsystem):
 
 Her skal vi regne ut desimaltall til binære tall, for å forstå hvordan datamaskinen leser disse tallene.
 Grunnen til at datamaskiner bruker binære tall henger sammen med hvordan digitale kretser er bygd opp (f.eks OG, NOG, NELLER-kretser) med logiske porter. Binære tall blir derfor tolket som 1-Sann , 0-Usann.
