@@ -1,1 +1,0 @@
-powershell -Command "While(1) {ps | sort -des cpu | select -f 30 | ft -a; sleep 1; cls}"

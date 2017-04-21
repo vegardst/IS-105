@@ -1,5 +1,8 @@
 package main
-
+//////////////////////////////////
+// 	ICA02, IS-105	 	//
+// 	2017, 	Zwirc		//
+//////////////////////////////////
 import (
 	"bufio"
 	"fmt"
@@ -10,10 +13,6 @@ import (
 
 var scanner = bufio.NewScanner(os.Stdin)
 
-//////////////////////////////////
-//	Erlend Wiklem 2017	//
-//	ICA02, IS-105		//
-//////////////////////////////////
 
 func main() {
 	menu()
