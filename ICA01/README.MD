@@ -328,7 +328,7 @@ Så Louise vet at tallet er 5 , binærtall 101
 </tbody>
 </table>
 
-#####Hvor mye informasjon (i bits) har hver spiller fått?
+##### Hvor mye informasjon (i bits) har hver spiller fått?
 
 Det er totalt 8 muligheter med 3 sifret binære tall: N=8 som gir Log2(8) = 3 bit
 Formel brukt i oppgave: log2(8/mulige valg)
