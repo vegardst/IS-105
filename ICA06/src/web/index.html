@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tekst til tale</title>
+
+</head>
+<body><center>
+<h1>Tekst til tale:</h1>
+
+
+    Skriv teksten i boksen <BR>
+    <INPUT ID="tekst" TYPE="text" NAME="tekst" VALUE=""><P>
+    <INPUT TYPE="button" NAME="button" Value="Snakk til meg" onClick="playSound(tekst.value)">
+</FORM>
+
+</center>
+<script>
+    function playSound(tekst) {
+        var audio = new Audio('http://wiklem.sexy:8090/speech?voice=no&speed=125&text='+tekst);
+        audio.play();
+    }
+</script>
+
+</body>
+</html>
