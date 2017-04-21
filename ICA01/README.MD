@@ -156,3 +156,191 @@ Resultat:
 </tbody>
 </table>
 Informasjonskilde: Tek.no
+
+# Oppgave 1.2.2
+
+Informasjonsmengde Flere personer prøver å gjette et tresifret (3-bit) binært tall.
+
+- (1) Lise har fått vite / lærer at tallet er et oddetall.
+- (2) Per har fått vite at tallet er IKKE et multiplum av 3 (dvs. ikke 0, 3, 6). 
+- (3) Oskar har fått vite at tallet inneholder nøyaktig 2 enere. 
+- (4) Louise har fått vite alt det Lise, Per og Oskar vet.
+
+3 bit binære tall gir mulighetene:
+<table style="height: 154px;" border="1" width="251">
+<tbody>
+<tr>
+<td style="text-align: center;">000</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: center;">001</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">010</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: center;">011</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr>
+<td style="text-align: center;">100</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr>
+<td style="text-align: center;">101</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr>
+<td style="text-align: center;">110</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr>
+<td style="text-align: center;">111</td>
+<td style="text-align: center;">7</td>
+</tr>
+</tbody>
+</table>
+1. Lise vet at det er oddetall, og står igjen med tallene: 1, 3, 5, 7
+<table style="height: 154px;" border="1" width="251">
+<tbody>
+<tr>
+<td style="text-align: center;">001</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">011</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr>
+<td style="text-align: center;">101</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr>
+<td style="text-align: center;">111</td>
+<td style="text-align: center;">7</td>
+</tr>
+</tbody>
+</table>
+2. Per vet at tallet IKKE er multiplum av 3 (multiplum er et tall som forekommer når tallet multipliseres med et helt tall.)
+
+- 3*0 = 0
+- 3*1 = 3
+- 3*2 = 6
+
+Og Per står igjen med tallene: 1, 2, 4, 5, 7
+<table style="height: 154px;" border="1" width="251">
+<tbody>
+<tr>
+<td style="text-align: center;">001</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">010</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: center;">100</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr>
+<td style="text-align: center;">101</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr>
+<td style="text-align: center;">111</td>
+<td style="text-align: center;">7</td>
+</tr>
+</tbody>
+</table>
+
+3.  Oskar har fått vite at tallet inneholder nøyaktig 2 enere som er tallene 3,5,6
+
+<table style="height: 154px;" border="1" width="251">
+<tbody>
+<tr>
+<td style="text-align: center;">011</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr>
+<td style="text-align: center;">101</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr>
+<td style="text-align: center;">110</td>
+<td style="text-align: center;">6</td>
+</tr>
+</tbody>
+</table>
+
+(4) Louise har fått vite alt det Lise, Per og Oskar vet. 
+
+Så Louise vet at tallet er 5 , binærtall 101
+<table style="height: 173px;" border="1" width="303">
+<tbody>
+<tr>
+<td>Lise</td>
+<td>Per</td>
+<td>Oscar</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;1</td>
+<td>1</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>2</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;3</td>
+<td>&nbsp;</td>
+<td>3</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>4</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;5</td>
+<td>5</td>
+<td>5</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>6</td>
+</tr>
+<tr>
+<td>&nbsp;7</td>
+<td>7</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+#####Hvor mye informasjon (i bits) har hver spiller fått?
+
+Det er totalt 8 muligheter med 3 sifret binære tall: N=8 som gir Log2(8) = 3 bit
+Formel brukt i oppgave: log2(8/mulige valg)
+
+1) Lise vet at tallet er odetall, N=8/4
+<br>Lise sin informasjon i bits Log2(8/4) = 1 bit. Så Lise har 2 bit igjen å gjette.
+
+2) Per vet at tallet ikke er multiplum av 3, og står igjen med 5 tall. N=8/5
+<br>Per sin informasjon i bits Log2(8/5) = 0 bit. Per får under 1 bit informasjon å må gjette 3 bits ut av 5 mulige valg.
+
+3) Oskar vet at tallet inneholder nøyaktig 2enere som gir 3 muligheter. N=8/3
+<br>Oskar sin informasjon i bits Log2(8/3) = 1 bit. Per har like mye informasjon som Lise og har 2 bit igjen å gjette.
+
+4) Louise har fått vite alt Lise,Per og Oskar vet = log2(8/1)
+<br>Louse sin informasjon i bits 3 . Louise har 3Bits informasjon og 1 mulig valg
