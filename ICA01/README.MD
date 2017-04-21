@@ -1,6 +1,6 @@
 # Oppgave 1.2.1
 
-Konvertering av desimaltall til 2-tallsystemet (binært tallsystem):
+#####Konvertering av desimaltall til 2-tallsystemet (binært tallsystem):
 
 Her skal vi regne ut desimaltall til binære tall, for å forstå hvordan datamaskinen leser disse tallene.
 Grunnen til at datamaskiner bruker binære tall henger sammen med hvordan digitale kretser er bygd opp (f.eks OG, NOG, NELLER-kretser) med logiske porter. Binære tall blir derfor tolket som 1-Sann , 0-Usann.
@@ -55,8 +55,11 @@ Så for å regne ut dette legger vi sammen verdien for 1 bitene.
 
 
 Nå vi skal regne fra desimal til binært tall som i oppgaven, går vi motsatt vei.Dvs at vi begynner med det høyest mulig tallet i rekken 
+
 Så ser vi på tabellen over, blir 1 = 1
+
 Tallet 2 får verdien 10
+
 Tallet 5, har både verdien 4 og 1, og blir derfor 101 (Vi teller fra det høyeste tallet)
 
 * (1) 1 = 1 (1bit)
@@ -89,8 +92,67 @@ Tallet 5, har både verdien 4 og 1, og blir derfor 101 (Vi teller fra det høyes
 </tbody>
 </table>
 For å regne ut tall der du ikke finner verdien direkte i tallsystemet, slik som tallet 5 tar du binær tallet som er nermest, f.eks med tallet 22:
-22 = 16 + 6 (Men siden 6 ikke finnes i totalssystemet, må vi gå ned en verdi)
-22 = 16 + 4 + 2 (Da har vi funnet tallene i totalssystemet, og setter de sammen til binær kode)
-22 = 2^4 + 2^2 + 2^1 
-22 = 10110
 
+- 22 = 16 + 6 (Men siden 6 ikke finnes i totalssystemet, må vi gå ned en verdi)
+- 22 = 16 + 4 + 2 (Da har vi funnet tallene i totalssystemet, og setter de sammen til binær kode)
+- 22 = 2^4 + 2^2 + 2^1 
+- 22 = 10110
+
+Når vi jobber med både 2talls og 10talls systemet er det vanlig å skrive bak tallene hvilket system de tilhører: 10110 (to)
+
+##### 1) Konverter følgende binære tall til desimaltall (mest signifikante bit-en er til venstre):
+Hvis vi vil konvertere binære tall til tall i titallssystemet kan vi legge sammen plassverdien til alle 1 sifrene.
+
+- (1) 100 = 2^2 = 4
+- (2) 1001 = 2^3 + 2^0 = 9
+- (3) 1100110011 = 819
+<table style="height: 40px;" border="1" width="436">
+<tbody>
+<tr>
+<td style="text-align: center;">2^9</td>
+<td style="text-align: center;">2^8</td>
+<td style="text-align: center;">2^7</td>
+<td style="text-align: center;">2^6</td>
+<td style="text-align: center;">2^5</td>
+<td style="text-align: center;">2^4</td>
+<td style="text-align: center;">2^3</td>
+<td style="text-align: center;">2^2</td>
+<td style="text-align: center;">2^1</td>
+<td style="text-align: center;">2^0</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+= 2^9 + 2^8 + 2^5 + 2^4 + 2^1 + 2^0 
+= 819
+
+
+Resultat:
+<table style="height: 40px;" border="1" width="291">
+<tbody>
+<tr>
+<td style="text-align: center;">Bin&aelig;rtall</td>
+<td style="text-align: center;">100</td>
+<td style="text-align: center;">1001</td>
+<td style="text-align: center;">1100110011</td>
+</tr>
+<tr>
+<td style="text-align: center;">&nbsp;Desimaltall</td>
+<td style="text-align: center;">&nbsp;4</td>
+<td style="text-align: center;">9&nbsp;</td>
+<td style="text-align: center;">&nbsp;819</td>
+</tr>
+</tbody>
+</table>
+Informasjonskilde: Tek.no
