@@ -1,7 +1,7 @@
 # ICA 06
 
 ## Eksperiment 1
-/// Figur 1
+ ![alt text](https://github.com/Zwirc/IS-105/blob/master/ICA06/vedlegg/figur1.PNG "Wapp")
 
 Her i figure 1. ser vi en frekvensspektrum på setningen “gruppe 1” som ble sagt av en kvinne(venstre) og en mann (høyre).
 
@@ -11,7 +11,7 @@ I den nederste delen (spektrogram) ser vi litt mer forskjell fra person til pers
 gul viser til intensiteten til lyden, mens blå viser til hvor lyst eller mørk tonen er.
 
 
-/// Figur 2
+ ![alt text](https://github.com/Zwirc/IS-105/blob/master/ICA06/vedlegg/figur2.png "Wapp")
 Dette bilde viser en annen mann som også sier samme ordet, litt annerledes i uttalelsen enn i figure 1. men fortsatt ser vi en likhet mellom figurene. I den øverste halvdelen er de to første delene mer bredere, mens siste delen er ganske lik til figure 1.
 
 Den nederste halvdelen ser vi mer oppbyggingen av setningen.
@@ -48,3 +48,4 @@ Her finnes det både streaming og ikke streaming eksempler til forskjellige prog
 ## Ekstra
 
 Laget en Android applikasjon som bruker go koden ved hjelp av GoMobile sin gobind or presanterer eksperiment 2 og 3 samt ICA05 i en mobil applikasjon:
+ ![alt text](https://github.com/Zwirc/IS-105/blob/master/ICA06/vedlegg/Applikasjon.PNG "Wapp")
