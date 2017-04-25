@@ -13,12 +13,11 @@ import (
 	"log"
 )
 
-// GOOS=linux GOARCH=amd64 build -> Upload
 // Template idea from http://www.alexedwards.net/blog/golang-response-snippets#html
 
 func main() {
 	fmt.Println("Starting server:")
-	// Include css
+	// Include folder
 	http.Handle("/web/", http.StripPrefix("/web/", http.FileServer(http.Dir("web"))))
 	// Get that index
 	http.HandleFunc("/", index)
