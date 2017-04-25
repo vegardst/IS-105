@@ -43,7 +43,7 @@ Start server.go, gå til localhost:8080 og skriv inn tekst som bli konvertert ti
 
 ## Eksperiment 3
 Her brukes Google Speech API, med eksempler fra https://cloud.google.com/speech/docs / for å gjøre om tale til tekst.
-Her finnes det både streaming og ikke streaming eksempler til forskjellige programeringsspråk.
+Her finnes det både streaming og ikke streaming eksempler til forskjellige programeringsspråk, og siden det ble mer eller mindre ren kopi av denne valgte vi å ikke legge den opp på Github.
 
 ## Ekstra
 
